@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password checker APP</title>
+  </head>
+  <body>
+    <div class="main">
+      <label for="password">Password:</label>
+      <input type="password" id="pass" placeholder="Enter password" />
+      <button class="submit" id="submit">submit</button>
+    </div>
+    <script>
+      let enter = document.getElementById("pass");
+      let button = document.getElementById("submit");
+      button.addEventListener("click", () => {
+        if (enter.length < 10) {
+          enter.style.color = "red";
+          alert("ERROR");
+        } else {
+          enter.style.color = "green";
+          alert("Success");
+        }
+      });
+    </script>
+  </body>
+</html>
